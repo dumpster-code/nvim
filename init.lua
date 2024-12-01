@@ -23,16 +23,6 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
 
--- Close netrw buffer if opened on startup
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    -- Check if the buffer is 'netrw'
-    if vim.fn.bufname("%") == "netrw" then
-      vim.cmd("quit")  -- Close the 'netrw' buffer
-    end
-  end,
-})
-
 -- Load Telescope after startup (for example, opening file search)
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
