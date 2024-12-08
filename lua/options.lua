@@ -74,4 +74,8 @@ vim.opt.softtabstop = 4
 
 vim.opt.termguicolors = true
 
+-- netrw
+-- Open file in new tab
+vim.g.netrw_browse_split = 3
+
 -- vim: ts=2 sts=2 sw=2 et

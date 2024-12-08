@@ -23,23 +23,12 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
 
--- Load Telescope after startup (for example, opening file search)
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    require('telescope.builtin').find_files()  -- Opens Telescope file finder
-  end,
-})
-
--- Close netrw when opening a file
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "netrw*",
-  callback = function()
-    -- Close the netrw buffer if a file is open
-    if vim.fn.expand("%") ~= "" then
-      vim.cmd("bdelete")
-    end
-  end,
-})
+-- -- Load Telescope after startup (for example, opening file search)
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   callback = function()
+--     require('telescope.builtin').find_files()  -- Opens Telescope file finder
+--   end,
+-- })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

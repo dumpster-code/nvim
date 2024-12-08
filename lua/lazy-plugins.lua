@@ -34,6 +34,7 @@ require('lazy').setup({
   -- require 'kickstart/plugins/lint',
   require 'kickstart/plugins/lspconfig',
   require 'kickstart/plugins/mini',
+  require 'kickstart/plugins/nvim_tree',
   require 'kickstart/plugins/sneak',
   require 'kickstart/plugins/telescope',
   require 'kickstart/plugins/todo-comments',
